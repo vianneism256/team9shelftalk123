@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shelf Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('office.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: rgba(251, 191, 36, 1); /* Same yellow with transparency */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+        .header .logo {
+            font-size: 24px;
+        }
+        .nav {
+            display: flex;
+            gap: 16px;
+            font-weight: 600;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .buttons a {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            background-color: #e5e7eb; /* Light gray */
+        }
+
+        /* About Us Section */
+        .about-container {
+            background: rgba(255, 255, 255, 0.75); /* Slightly transparent white */
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-container h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Directors Table */
+        .directors-table {
+            width: 100%;
+            border-spacing: 20px;
+            text-align: center;
+        }
+
+        .directors-table img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+
+
+        }
+
+        .directors-table td {
+            padding: 10px;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .position {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">SHELF<br><b>TALK</b></div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="genres.html">GENRES</a>
+            <a href="authors.html">AUTHORS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="mylibrary.html">MY LIBRARY</a>
+        </nav>
+        <div class="buttons">
+            <a href="contact.html">CONTACT</a>
+            <a href="aboutus.html">ABOUT US</a>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-container">
+        <h2>About Us</h2>
+        <p>Meet the team behind Shelf Talk! We’re dedicated to creating a space for book lovers to connect, explore, and share their passion for reading.</p>
+
+        <!-- Directors and Officers Table -->
+        <table class="directors-table">
+            <tr>
+                <td>
+                    <img src="janel.jpg" alt="Director 1">
+                    <div class="name">Janel Laynes</div>
+                    <div class="position">Co Founder / Director</div>
+                </td>
+                <td>
+                    <img src="kiara.jpg" alt="Director 2">
+                    <div class="name">Kiara Lohan Ella</div>
+                    <div class="position">Co Founder / Corporate Secretary</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="gabriel.jpg" alt="Officer 1">
+                    <div class="name">Gabriel Ibo</div>
+                    <div class="position">Co Founder / Independent Director</div>
+                </td>
+                <td>
+                    <img src="vianne.JPG" alt="Officer 2">
+                    <div class="name">Vianne Louie navida</div>
+                    <div class="position">Co Founder / CFO</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

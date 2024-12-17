@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #e5e7eb; /* gray-200 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #fbbf24; /* yellow-500 */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+        .header .logo {
+            font-size: 24px;
+            color: black;
+        }
+
+
+        .nav {
+            display: flex;
+            gap: 16px;
+            font-weight: 600;
+            color: black;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .buttons a {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            background-color: #e5e7eb; /* gray-100 */
+        }
+
+
+
+
+        .container {
+            display: flex;
+
+
+        }
+        .left-ad, .right-ad {
+            background-color: #e5e7eb; /* gray-100 */
+            padding: 16px;
+            flex: 1;
+        }
+        .main-content {
+            padding: 16px;
+            flex: 3;
+        }
+        .ad-banner {
+            width: 100%;
+
+
+
+
+            
+
+        }
+        .post-section {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+        }
+        .post-section input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 24px;
+            color: #374151; /* gray-700 */
+        }
+        .review-section {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+
+        }
+        .review-section img {
+            width: 50%;
+            display: block; /* Make iframe a block-level element */
+            margin: 0 auto; /* Center it horizontally */
+        }
+
+        
+        .friends-list {
+            text-align: center;
+            margin-top: 16px;
+        }
+        .friends-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">SHELF<br><b>TALK</b></div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="genres.html">GENRES</a>
+            <a href="authors.html">AUTHORS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="mylibrary.html">MY LIBRARY</a>
+        </nav>
+        <div class="buttons">
+            <a href="contact.html">CONTACT</a>
+            <a href="aboutus.html">ABOUT US</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Advertisement -->
+        <div class="left-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="mmcad.png" alt="Advertisement banner with clouds and a green field" class="ad-banner">
+        </div>
+
+
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Review 1 -->
+            <div class="review-section">
+                <h4>Legazpi Village Book Lovers</h4>
+                <p>📖 New Club Meeting
+                    Hey everyone! Our next meeting is on Saturday,<br>
+                    4 PM at The Coffee Bean. We’ll be discussing
+                    The Vanishing Half <br>by Brit Bennett. Don’t forget<br>
+                    to bring your notes and thoughts! 😊<br>Pre register
+                    here: https://bit.ly/145145</p>
+
+                <img src="community1.jpg" alt="Advertisement banner with clouds and a green field">
+            </div>
+
+            <!-- Review 1 -->
+            <div class="review-section">
+                <h4>Naga City Bibliophiles</h4>
+                <p>📚 Happening Now!
+                    Our Sharing session is in full swing at the Naga City<br>
+                    Library! Join us as we dive into The Midnight Library<br>
+                    by Matt Haig. Feel
+                    free to drop by and share your thoughts!</p>
+
+                <img src="community2.jpg" alt="Advertisement banner with clouds and a green field">
+            </div>
+
+            <div class="review-section">
+                <h4>Dasmarinas Village Book Club</h4>
+                <p>📚 Happening Now!
+                    Drop by the new Cafe this weekend at rockwell<br>
+                    and join us at our quarterly release discussion
+                    Feel free to bring<br> a book and your friends too!</p>
+
+                <img src="community3.jpg" alt="Advertisement banner with clouds and a green field">
+            </div>
+
+        </div>
+
+
+
+        <!-- Right Advertisement and Friends List -->
+        <div class="right-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="ayalaad.jpg" alt="Advertisement banner with sky and hills" class="ad-banner">
+            <div class="friends-list">
+                <div class="font-semibold">Friends</div>
+                <ul>
+                    <li>Kiara Lohan Ella</li>
+                    <li>Janel Laynes</li>
+                    <li>Gabriel Ibo</li>
+                    <li>Vianne Navida</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

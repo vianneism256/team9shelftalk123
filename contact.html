@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shelf Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('office.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+        }
+
+
+        .header {
+            background-color: rgba(251, 191, 36, 1); 
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 16px;
+            font-weight: 600;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .buttons a {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            background-color: #e5e7eb; 
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: rgba(255, 255, 255, 0.75); 
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container h2 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .contact-container p {
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        .form-group button {
+            background-color: #fbbf24; /* Yellow */
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #f59e0b; /* Darker yellow */
+        }
+
+        /* Office Location */
+        .office-location {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo">SHELF<br><b>TALK</b></div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="genres.html">GENRES</a>
+            <a href="authors.html">AUTHORS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="mylibrary.html">MY LIBRARY</a>
+        </nav>
+        <div class="buttons">
+            <a href="contact.html">CONTACT</a>
+            <a href="aboutus.html">ABOUT US</a>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="inquiry">Inquiry:</label>
+                <input type="text" id="inquiry" name="inquiry" placeholder="Enter inquiry topic" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+
+        <div class="office-location">
+            <p><strong>Shelf Talk Office Location:</strong></p>
+            <p>Unit D, G/F, North Wing Estancia Offices, Capitol Commons, Ortigas Center, Pasig City 1605</p>
+        </div>
+    </div>
+</body>
+</html>

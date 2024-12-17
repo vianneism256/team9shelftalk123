@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #e5e7eb;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #fbbf24;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            gap: 16px;
+            font-weight: 600;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .buttons a {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            background-color: #e5e7eb; /* gray-100 */
+        }
+        .container {
+            display: flex;
+            margin: 16px;
+        }
+
+        .left-ad, .right-ad {
+            background-color: #e5e7eb; /* gray-100 */
+            padding: 16px;
+            flex: 1;
+        }
+        .main-content {
+            flex: 3;
+            padding: 16px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .ad-banner {
+            width: 100%;
+        }
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            gap: 16px;
+        }
+        .filter-section input, select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #d1d5db;
+        }
+        .filter-section input {
+            flex: 1;
+        }
+        .review-section {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .review-section img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">SHELF<br><b>TALK</b></div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="genres.html">GENRES</a>
+            <a href="authors.html">AUTHORS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="mylibrary.html">MY LIBRARY</a>
+        </nav>
+        <div class="buttons">
+            <a href="contact.html">CONTACT</a>
+            <a href="aboutus.html">ABOUT US</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="mmcad.png" alt="Advertisement banner with clouds and a green field" class="ad-banner">
+        </div>
+
+        <div class="main-content">
+            <!-- Filter, Sort, and Search Section -->
+            <div class="filter-section">
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Search by title..." 
+                    oninput="filterBooks()">
+                <div>
+                    <label for="category">Category: </label>
+                    <select id="category" onchange="filterBooks()">
+                        <option value="all">All Categories</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Science Fiction</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sort">Sort By: </label>
+                    <select id="sort" onchange="filterBooks()">
+                        <option value="popularity">Popularity</option>
+                        <option value="rating">Rating</option>
+                        <option value="alphabetical">Alphabetical</option>
+                        <option value="new-arrival">New Arrival</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Books Display Section -->
+            <div id="books-list">
+                <!-- Book Items will be added dynamically here -->
+            </div>
+        </div>
+
+        <div class="right-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="ayalaad.jpg" alt="Advertisement banner with sky and hills" class="ad-banner">
+            <div class="friends-list">
+                <div class="font-semibold">Friends</div>
+                <ul>
+                    <li>Kiara Lohan Ella</li>
+                    <li>Janel Laynes</li>
+                    <li>Gabriel Ibo</li>
+                    <li>Vianne Navida</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book data
+        const books = [
+            { title: "Where the Crawdads Sing", author: "Delia Owens", category: "fiction", rating: 4.8, popularity: 97, image: "where the crawdads sing.jpg" },
+            { title: "1984", author: "George Orwell", category: "sci-fi", rating: 4.9, popularity: 95, image: "1984.jpg" },
+            { title: "Educated", author: "Tara Westover", category: "non-fiction", rating: 4.7, popularity: 92, image: "educated.jpg" },
+            { title: "The Silent Patient", author: "Alex Michaelides", category: "mystery", rating: 4.6, popularity: 90, image: "silent patient.jpg" },
+            { title: "Harry Potter", author: "J.K. Rowling", category: "fantasy", rating: 4.9, popularity: 99, image: "harrypotter.jpg" }
+        ];
+
+        // Function to display books
+        function displayBooks(filteredBooks) {
+            const booksList = document.getElementById("books-list");
+            booksList.innerHTML = ""; // Clear previous list
+
+            filteredBooks.forEach(book => {
+                booksList.innerHTML += `
+                    <div class="review-section">
+                        <img src="${book.image}" alt="${book.title} cover">
+                        <div>
+                            <h4>${book.title}</h4>
+                            <p><strong>Author:</strong> ${book.author}</p>
+                            <p><strong>Rating:</strong> ${book.rating} | <strong>Popularity:</strong> ${book.popularity}</p>
+                            <p><strong>Category:</strong> ${book.category.charAt(0).toUpperCase() + book.category.slice(1)}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Function to filter and sort books
+        function filterBooks() {
+            const searchQuery = document.getElementById("search").value.toLowerCase();
+            const category = document.getElementById("category").value;
+            const sort = document.getElementById("sort").value;
+
+            let filteredBooks = books;
+
+            // Search filter
+            if (searchQuery) {
+                filteredBooks = filteredBooks.filter(book =>
+                    book.title.toLowerCase().includes(searchQuery)
+                );
+            }
+
+            // Filter by category
+            if (category !== "all") {
+                filteredBooks = filteredBooks.filter(book => book.category === category);
+            }
+
+            // Sort books
+            if (sort === "popularity") {
+                filteredBooks.sort((a, b) => b.popularity - a.popularity);
+            } else if (sort === "rating") {
+                filteredBooks.sort((a, b) => b.rating - a.rating);
+            } else if (sort === "alphabetical") {
+                filteredBooks.sort((a, b) => a.title.localeCompare(b.title));
+            } else if (sort === "new-arrival") {
+                filteredBooks.reverse(); // For example purposes, reverse array for new arrivals
+            }
+
+            displayBooks(filteredBooks);
+        }
+
+        // Initial display
+        window.onload = () => {
+            displayBooks(books);
+        };
+    </script>
+</body>
+</html>

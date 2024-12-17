@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Talk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #e5e7eb; /* gray-200 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #fbbf24; /* yellow-500 */
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+        .header .logo {
+            font-size: 24px;
+            color: black;
+        }
+
+
+        .nav {
+            display: flex;
+            gap: 16px;
+            font-weight: 600;
+            color: black;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .buttons a {
+            background-color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+        }
+        .buttons a:hover {
+            background-color: #e5e7eb; /* gray-100 */
+        }
+
+
+
+
+        .container {
+            display: flex;
+
+
+        }
+        .left-ad, .right-ad {
+            background-color: #e5e7eb; /* gray-100 */
+            padding: 16px;
+            flex: 1;
+        }
+        .main-content {
+            padding: 16px;
+            flex: 3;
+        }
+        .ad-banner {
+            width: 100%;
+
+
+
+
+            
+
+        }
+        .post-section {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+        }
+        .post-section input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 24px;
+            color: #374151; /* gray-700 */
+        }
+        .review-section {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+
+        }
+        .review-section img {
+            width: 80px;
+        }
+
+        .review-section iframe {
+        display: block; /* Make iframe a block-level element */
+        margin: 0 auto; /* Center it horizontally */
+        max-width: 100%; /* Ensure responsiveness */
+        }
+
+
+
+        .friends-list {
+            text-align: center;
+            margin-top: 16px;
+        }
+        .friends-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">SHELF<br><b>TALK</b></div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="books.html">BOOKS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="genres.html">GENRES</a>
+            <a href="authors.html">AUTHORS</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="mylibrary.html">MY LIBRARY</a>
+        </nav>
+        <div class="buttons">
+            <a href="contact.html">CONTACT</a>
+            <a href="aboutus.html">ABOUT US</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Advertisement -->
+        <div class="left-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="mmcad.png" alt="Advertisement banner with clouds and a green field" class="ad-banner">
+        </div>
+
+
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+<!-- Review 1 -->
+<div class="review-section">
+    <h4>Delia Owens</h4>
+    <p>Known for:<br>
+        Where the Crawdads Sing<br>
+        Cry of the Kalahari<br>
+        The Eyes of the Elephant<br>
+        Secrets of The Savanna</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/g5mXmbR11hM"></iframe>
+    <p>Delia Owens on the inspiration for "Where the Crawdads Sing" on Sunday Morning
+        https://youtu.be/g5mXmbR11hM</p>
+</div>
+
+<!-- Review 2 -->
+<div class="review-section">
+    <h4>John Green</h4>
+    <p>Known for:<br>
+        The Fault in Our Stars<br>
+        Looking for Alaska<br>
+        Turtles All the Way Down<br>
+        Paper Towns</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/zM0EJiVB71w"></iframe>
+    <p>John Green on how a lifetime of OCD inspired Turtles All The Way Down
+        https://www.youtube.com/watch?v=zM0EJiVB71w</p>
+</div>
+
+<!-- Review 3 -->
+<div class="review-section">
+    <h4>George R.R. Martin</h4>
+    <p>Known for:<br>
+        A Game of Thrones<br>
+        A Clash of Kings<br>
+        A Storm of Swords<br>
+        A Dance with Dragons</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/QgCxVdsQH_k"></iframe>
+    <p>George R.R. Martin talks about the inspiration behind "A Song of Ice and Fire"
+        https://youtu.be/7nXxvWw5q6A</p>
+</div>
+
+<!-- Review 4 -->
+<div class="review-section">
+    <h4>J.K. Rowling</h4>
+    <p>Known for:<br>
+        Harry Potter and the Sorcerer's Stone<br>
+        Harry Potter and the Chamber of Secrets<br>
+        Harry Potter and the Prisoner of Azkaban<br>
+        Harry Potter and the Goblet of Fire</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/3uLa3WKXwLg"></iframe>
+    <p>J.K. Rowling on the making of the Harry Potter series
+        https://youtu.be/S2eQjFj4lSo</p>
+</div>
+
+<!-- Review 5 -->
+<div class="review-section">
+    <h4>Agatha Christie</h4>
+    <p>Known for:<br>
+        Murder on the Orient Express<br>
+        The Murder of Roger Ackroyd<br>
+        And Then There Were None<br>
+        Death on the Nile</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/IsLCIwBJiCg"></iframe>
+    <p>Agatha Christie: The Queen of Crime
+        https://youtu.be/2L6tVZdfx28</p>
+</div>
+
+<!-- Review 6 -->
+<div class="review-section">
+    <h4>Stephen King</h4>
+    <p>Known for:<br>
+        The Shining<br>
+        It<br>
+        Carrie<br>
+        Misery</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/CQF37Z4CEWg"></iframe>
+    <p>Stephen King on how he writes horror stories
+        https://youtu.be/h8r-V9vXj1k</p>
+</div>
+
+<!-- Review 7 -->
+<div class="review-section">
+    <h4>Margaret Atwood</h4>
+    <p>Known for:<br>
+        The Handmaid's Tale<br>
+        Oryx and Crake<br>
+        Alias Grace<br>
+        The Blind Assassin</p>
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/ljvVUW2vrRU"></iframe>
+    <p>Margaret Atwood discusses the themes of "The Handmaid's Tale"
+        https://youtu.be/daEx4yOf5lk</p>
+</div>
+
+        </div>
+
+
+
+        <!-- Right Advertisement and Friends List -->
+        <div class="right-ad">
+            <div class="text-center font-semibold mb-2">advertisement</div>
+            <img src="ayalaad.jpg" alt="Advertisement banner with sky and hills" class="ad-banner">
+            <div class="friends-list">
+                <div class="font-semibold">Friends</div>
+                <ul>
+                    <li>Kiara Lohan Ella</li>
+                    <li>Janel Laynes</li>
+                    <li>Gabriel Ibo</li>
+                    <li>Vianne Navida</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
